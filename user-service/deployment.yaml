@@ -1,0 +1,8 @@
+# podman build 
+
+# podman run to validate 
+
+
+# podman push to an image repository 
+
+# add deployment spec here and point to your image :) 
