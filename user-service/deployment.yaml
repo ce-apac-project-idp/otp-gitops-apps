@@ -1,8 +1,51 @@
-# podman build 
-
-# podman run to validate 
-
-
-# podman push to an image repository 
-
-# add deployment spec here and point to your image :) 
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: user-sample-service
+  labels:
+    app: user-sample-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-sample-service
+  template:
+    metadata:
+      labels:
+        app: user-sample-service
+    spec:
+      containers:
+        - name: idp-sample-user-service
+          image: quay.io/minnie0531/user-sample-service
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql-db
+                  key: db.host
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql-db
+                  key: db.port
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql-db
+                  key: db.name
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgresql-db-secret
+                  key: db.user
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: postgresql-db-secret
+                  key: db.password
+          imagePullPolicy: Always
+      restartPolicy: Always
