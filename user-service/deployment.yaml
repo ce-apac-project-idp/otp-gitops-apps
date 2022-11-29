@@ -24,28 +24,25 @@ spec:
           env:
             - name: DB_HOST
               valueFrom:
-                configMapKeyRef:
-                  name: postgresql-db
-                  key: db.host
+                secretKeyRef:
+                  name: postgres-test-claim-connection-secret
+                  key: endpoint
             - name: DB_PORT
               valueFrom:
-                configMapKeyRef:
-                  name: postgresql-db
-                  key: db.port
+                secretKeyRef:
+                  name: postgres-test-claim-connection-secret
+                  key: port
             - name: DB_NAME
-              valueFrom:
-                configMapKeyRef:
-                  name: postgresql-db
-                  key: db.name
+              value: postgres
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
-                  name: postgresql-db-secret
-                  key: db.user
+                  name: postgres-test-claim-connection-secret
+                  key: username
             - name: DB_PASS
               valueFrom:
                 secretKeyRef:
-                  name: postgresql-db-secret
-                  key: db.password
+                  name: postgres-test-claim-connection-secret
+                  key: password
           imagePullPolicy: Always
       restartPolicy: Always
