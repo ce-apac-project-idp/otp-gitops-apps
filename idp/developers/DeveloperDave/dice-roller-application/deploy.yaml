@@ -1,8 +1,10 @@
 apiVersion: apac.catalyst.project.idp/v1alpha1
 kind: postgresql
 metadata:
-  name: postgres-test-claim
+  name: postgres-claim
   namespace: crossplane-system
+  labels:
+    backstage.io/kubernetes-id: crossplane-rds
 spec:
   parameters:
     class: db.t2.small
@@ -10,4 +12,4 @@ spec:
   compositionRef:
     name: psql-aws-composition
   writeConnectionSecretToRef:
-    name: postgres-test-claim-connection-secret
+    name: postgres-claim-connection-secret
