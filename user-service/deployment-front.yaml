@@ -1,0 +1,28 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: user-sample-service-front
+  labels:
+    app: user-sample-service-front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-sample-service-front
+  template:
+    metadata:
+      labels:
+        app: user-sample-service-front
+    spec:
+      containers:
+        - name: user-sample-service-front
+          image: quay.io/minnie0531/user-sample-front
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          env:
+            - name: REACT_APP_BACKEND_HOST
+              value: "http://user-sample-service:8080"
+          imagePullPolicy: Always
+      restartPolicy: Always

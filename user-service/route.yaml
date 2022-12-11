@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: user-sample-service
+  name: user-service
 spec:
   path: /
   to:
     kind: Service
-    name: user-sample-service
+    name: user-sample-service-front
   port:
     targetPort: http
