@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marwan-ravioli
+  namespace: marwan-dev
+  labels:
+    app: marwan-ravioli
+    developer: marwan
+    purpose: testing
+spec:
+  selector:
+    matchLabels:
+      app: ravioli
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ravioli
+    spec:
+      containers:
+        - name: ravioli-testing
+          image: quay.io/idp_org/marwan-ravioli:testing:sha256:2cdc64953a5bab3fa18b45274203ad4a16c4187698f2103d6449947207634d5d
