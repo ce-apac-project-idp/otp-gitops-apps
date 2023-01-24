@@ -19,5 +19,4 @@ spec:
     spec:
       containers:
         - name: internal-development
-          image:
-            quay.io/idp_org/gogopowerrangers-internal:development:
+          image: quay.io/idp_org/gogopowerrangers-internal:development:sha256:c9af3a2a51614a4cd2eb77fbc721a8b2201c827bac528792f69badb198bb3189
