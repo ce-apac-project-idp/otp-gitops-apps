@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kinder-kindersuprise
+  name: gogopowerrangers-internal
   namespace: marwan-dev
   labels:
-    app: kinder-kindersuprise
-    developer: kinder
-    purpose: rangin
+    app: gogopowerrangers-internal
+    developer: gogopowerrangers
+    purpose: development
 spec:
   selector:
     matchLabels:
-      app: kindersuprise
+      app: internal
   replicas: 1
   template:
     metadata:
       labels:
-        app: kindersuprise
+        app: internal
     spec:
       containers:
-        - name: kindersuprise-rangin
+        - name: internal-development
           image:
-            quay.io/idp_org/kinder-kindersuprise:rangin:
+            quay.io/idp_org/gogopowerrangers-internal:development:
