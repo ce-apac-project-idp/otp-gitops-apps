@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gogopowerrangers-internal
+  name: default-asdf
   namespace: marwan-dev
   labels:
-    app: gogopowerrangers-internal
-    developer: gogopowerrangers
-    purpose: development
+    app: default-asdf
+    developer: default
+    purpose: dev
 spec:
   selector:
     matchLabels:
-      app: internal
+      app: asdf
   replicas: 1
   template:
     metadata:
       labels:
-        app: internal
+        app: asdf
     spec:
       containers:
-        - name: internal-development
-          image: quay.io/idp_org/gogopowerrangers-internal:development:sha256:d17b181841d1633e773735397eabb57024c4cba0e700104f6b1c7f6e6e885a33
+        - name: asdf-dev
+          image: quay.io/idp_org/default-asdf:dev:sha256:7ae4fd372822a0d1fb8122c0ac87c8ac0331818465808fdd1b95e6e6a839b737
