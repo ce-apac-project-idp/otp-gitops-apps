@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: default-asdf
+  name: ryu-my-react
   namespace: marwan-dev
   labels:
-    app: default-asdf
-    developer: default
-    purpose: dev
+    app: ryu-my-react
+    developer: ryu
+    purpose: test
 spec:
   selector:
     matchLabels:
-      app: asdf
+      app: my-react
   replicas: 1
   template:
     metadata:
       labels:
-        app: asdf
+        app: my-react
     spec:
       containers:
-        - name: asdf-dev
-          image: quay.io/idp_org/default-asdf:dev:sha256:7ae4fd372822a0d1fb8122c0ac87c8ac0331818465808fdd1b95e6e6a839b737
+        - name: my-react-test
+          image: quay.io/idp_org/ryu-my-react:test:sha256:cd2ade1d5dde91e6ab9e73a850e5e784156c642a0cc559b5e5191492a0b9d544
