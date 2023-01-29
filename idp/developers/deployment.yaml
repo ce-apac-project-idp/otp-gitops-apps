@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: my-react-test
-          image: quay.io/idp_org/ryu-my-react:test:sha256:cd2ade1d5dde91e6ab9e73a850e5e784156c642a0cc559b5e5191492a0b9d544
+          image: quay.io/idp_org/ryu-my-react:test:sha256:b54a615334802296b39993353287321436ef9a979afae6b0b8a2f95cbe665581
