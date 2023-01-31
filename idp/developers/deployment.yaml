@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: baza-scanneryscanscan
+  name: bazza-ferrityfckya
   namespace: marwan-dev
   labels:
-    app: baza-scanneryscanscan
-    developer: baza
-    purpose: fckya
+    app: bazza-ferrityfckya
+    developer: bazza
+    purpose: ffy
 spec:
   selector:
     matchLabels:
-      app: scanneryscanscan
+      app: ferrityfckya
   replicas: 1
   template:
     metadata:
       labels:
-        app: scanneryscanscan
+        app: ferrityfckya
     spec:
       containers:
-        - name: scanneryscanscan-fckya
-          image: quay.io/idp_org/baza-scanneryscanscan:fckya:sha256:290c18819eb4710230b71be372ba3470a2e95ed67cb15287b3d859f60f891a26
+        - name: ferrityfckya-ffy
+          image: quay.io/idp_org/bazza-ferrityfckya:ffy:sha256:2bf63e770578d622c758f4798337d9816cc2f298b34956a80113a272100fb8e9
