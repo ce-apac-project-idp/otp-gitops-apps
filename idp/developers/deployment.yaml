@@ -19,4 +19,5 @@ spec:
     spec:
       containers:
         - name: cucumber-cucumber
-          image: quay.io/idp_org/cucumber-cucumber:cucumber:sha256:621a2f862d5354822e444ecea783cc52fd13e73c98ea27a32c61d4ea34ef0651
+          image:
+            quay.io/idp_org/cucumber-cucumber:cucumber:
