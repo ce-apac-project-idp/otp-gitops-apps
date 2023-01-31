@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: rangin-dev
-          image: quay.io/idp_org/pokeman-rangin:dev:sha256:7ab99f432cbcc5677457d4dcee87bd233e7a600b201013ffc94ac4c27432cf03
+          image: quay.io/idp_org/pokeman-rangin:dev:sha256:0f7787c8b0d1548f988464e1cd46f641ebb3b3aa36aed0cc621914f0869e2acd
