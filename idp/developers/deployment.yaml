@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: alakhir-alakhir
+  name: ryu-my-react
   namespace: marwan-dev
   labels:
-    app: alakhir-alakhir
-    developer: alakhir
-    purpose: final
+    app: ryu-my-react
+    developer: ryu
+    purpose: test
 spec:
   selector:
     matchLabels:
-      app: alakhir
+      app: my-react
   replicas: 1
   template:
     metadata:
       labels:
-        app: alakhir
+        app: my-react
     spec:
       containers:
-        - name: alakhir-final
-          image: quay.io/idp_org/alakhir-alakhir:final:sha256:ffc6cd8e4d17756c8aa6dd83fd6b893c634a8d0b7031663b01adc41b4c0a9360
+        - name: my-react-test
+          image: quay.io/idp_org/ryu-my-react:test:sha256:e1a5c9bba5fe53ecd2c010923fbffe7ede532c65916219913bec8541f93f1b6a
