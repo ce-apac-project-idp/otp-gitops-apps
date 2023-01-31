@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: buzzing-ferryfya
+  name: pokeman-rangin
   namespace: marwan-dev
   labels:
-    app: buzzing-ferryfya
-    developer: buzzing
+    app: pokeman-rangin
+    developer: pokeman
     purpose: dev
 spec:
   selector:
     matchLabels:
-      app: ferryfya
+      app: rangin
   replicas: 1
   template:
     metadata:
       labels:
-        app: ferryfya
+        app: rangin
     spec:
       containers:
-        - name: ferryfya-dev
-          image: quay.io/idp_org/buzzing-ferryfya:dev:sha256:55922db8a1e20e329ee6cabcae71231511cefea6638c3db13d11d2a27b065582
+        - name: rangin-dev
+          image: quay.io/idp_org/pokeman-rangin:dev:sha256:7ab99f432cbcc5677457d4dcee87bd233e7a600b201013ffc94ac4c27432cf03
