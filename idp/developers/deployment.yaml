@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pokeman-rangin
+  name: nodes-nodd
   namespace: marwan-dev
   labels:
-    app: pokeman-rangin
-    developer: pokeman
-    purpose: dev
+    app: nodes-nodd
+    developer: nodes
+    purpose: node
 spec:
   selector:
     matchLabels:
-      app: rangin
+      app: nodd
   replicas: 1
   template:
     metadata:
       labels:
-        app: rangin
+        app: nodd
     spec:
       containers:
-        - name: rangin-dev
-          image: quay.io/idp_org/pokeman-rangin:dev:sha256:525c63ab9b509387af5a5a1003db7ff649c99eee1d71cd709314ffd23a134b45
+        - name: nodd-node
+          image: quay.io/idp_org/nodes-nodd:node:sha256:7d834f32c1633b881620daee2bcaf2e4c3173361fe94492fb9330688c8f4116b
