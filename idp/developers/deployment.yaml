@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zxvf-asdf
+  name: lok-ikj
   namespace: marwan-dev
   labels:
-    app: zxvf-asdf
-    developer: zxvf
-    purpose: asdf
+    app: lok-ikj
+    developer: lok
+    purpose: lmn
 spec:
   selector:
     matchLabels:
-      app: asdf
+      app: ikj
   replicas: 1
   template:
     metadata:
       labels:
-        app: asdf
+        app: ikj
     spec:
       containers:
-        - name: asdf-asdf
-          image: quay.io/idp_org/zxvf-asdf:asdf:sha256:7d41aeded7ec0b9b06bb0fe0cab38e9bd8922d7bac25c370778e4f4f80e16bf7
+        - name: ikj-lmn
+          image: quay.io/idp_org/lok-ikj:lmn:sha256:6273dc025d4ae60826ce4c40790e4adaf2f2824731b75d8a78ddb43b99b1c0bf
