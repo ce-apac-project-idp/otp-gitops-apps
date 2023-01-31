@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bazza-ferrityfckya
+  name: paw-paw
   namespace: marwan-dev
   labels:
-    app: bazza-ferrityfckya
-    developer: bazza
-    purpose: ffy
+    app: paw-paw
+    developer: paw
+    purpose: build
 spec:
   selector:
     matchLabels:
-      app: ferrityfckya
+      app: paw
   replicas: 1
   template:
     metadata:
       labels:
-        app: ferrityfckya
+        app: paw
     spec:
       containers:
-        - name: ferrityfckya-ffy
-          image: quay.io/idp_org/bazza-ferrityfckya:ffy:sha256:2bf63e770578d622c758f4798337d9816cc2f298b34956a80113a272100fb8e9
+        - name: paw-build
+          image: quay.io/idp_org/paw-paw:build:sha256:1c28fb094ad2bfca894c57319e113a75dac69d65377e2bea5d76846a9c62b2ff
