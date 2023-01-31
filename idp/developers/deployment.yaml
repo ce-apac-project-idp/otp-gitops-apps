@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: potato-dev
-          image: quay.io/idp_org/potatohead-potato:dev:sha256:d66f7771362dcd46ef5feb3f986adff607d455b45a0b1f19094d21ecd48f6ad2
+          image: quay.io/idp_org/potatohead-potato:dev:sha256:205322442af71b5fc3c2cba1e2913757eca36fbbf384609d216de33e1f63532d
