@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ryu-my-react
+  name: potatohead-volcano
   namespace: marwan-dev
   labels:
-    app: ryu-my-react
-    developer: ryu
-    purpose: test
+    app: potatohead-volcano
+    developer: potatohead
+    purpose: dev
 spec:
   selector:
     matchLabels:
-      app: my-react
+      app: volcano
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-react
+        app: volcano
     spec:
       containers:
-        - name: my-react-test
-          image: quay.io/idp_org/ryu-my-react:test:sha256:ec9ab722b1ebf2d6d383d99e38731d06df65982203299e5a371adaf9b7ba1ab3
+        - name: volcano-dev
+          image:
+            quay.io/idp_org/potatohead-volcano:dev:
