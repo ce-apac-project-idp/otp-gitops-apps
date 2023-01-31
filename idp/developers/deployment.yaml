@@ -1,23 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: potatohead-volcano
+  name: potatohead-potato
   namespace: marwan-dev
   labels:
-    app: potatohead-volcano
+    app: potatohead-potato
     developer: potatohead
     purpose: dev
 spec:
   selector:
     matchLabels:
-      app: volcano
+      app: potato
   replicas: 1
   template:
     metadata:
       labels:
-        app: volcano
+        app: potato
     spec:
       containers:
-        - name: volcano-dev
-          image:
-            quay.io/idp_org/potatohead-volcano:dev:
+        - name: potato-dev
+          image: quay.io/idp_org/potatohead-potato:dev:sha256:ce66aa916b11ecb536a58f6a457ec83fa9320edc378ccf9b3d477cefd05b7b68
