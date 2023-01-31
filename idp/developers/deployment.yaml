@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ryu-my-react
+  name: laskdm-khalas
   namespace: marwan-dev
   labels:
-    app: ryu-my-react
-    developer: ryu
-    purpose: test
+    app: laskdm-khalas
+    developer: laskdm
+    purpose: nomore
 spec:
   selector:
     matchLabels:
-      app: my-react
+      app: khalas
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-react
+        app: khalas
     spec:
       containers:
-        - name: my-react-test
-          image: quay.io/idp_org/ryu-my-react:test:sha256:2010c8e01965ac5f1ae1cb321a0f597c0ba11c2d2218ce692b9069d59aac81d6
+        - name: khalas-nomore
+          image: quay.io/idp_org/laskdm-khalas:nomore:sha256:4f4d4d6bb30d2435cc21375480e6dcdf7baf5067e6dce740334a2d792bc6555d
