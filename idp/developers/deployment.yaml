@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: paw-paw
+  name: alakhir-alakhir
   namespace: marwan-dev
   labels:
-    app: paw-paw
-    developer: paw
-    purpose: build
+    app: alakhir-alakhir
+    developer: alakhir
+    purpose: final
 spec:
   selector:
     matchLabels:
-      app: paw
+      app: alakhir
   replicas: 1
   template:
     metadata:
       labels:
-        app: paw
+        app: alakhir
     spec:
       containers:
-        - name: paw-build
-          image: quay.io/idp_org/paw-paw:build:sha256:c5bb5cfdd7f16c9d1acbd7a6521a6a419887e43b5a46a503a0cd44789587ef03
+        - name: alakhir-final
+          image: quay.io/idp_org/alakhir-alakhir:final:sha256:7f62e53385b13b091e7e272baec0faba79020be791f2facda944f398dacb7be8
