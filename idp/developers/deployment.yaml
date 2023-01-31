@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: paw-build
-          image: quay.io/idp_org/paw-paw:build:sha256:1c28fb094ad2bfca894c57319e113a75dac69d65377e2bea5d76846a9c62b2ff
+          image: quay.io/idp_org/paw-paw:build:sha256:c5bb5cfdd7f16c9d1acbd7a6521a6a419887e43b5a46a503a0cd44789587ef03
