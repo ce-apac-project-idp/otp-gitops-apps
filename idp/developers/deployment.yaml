@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: potatohead-potato
+  name: buzzing-ferryfya
   namespace: marwan-dev
   labels:
-    app: potatohead-potato
-    developer: potatohead
+    app: buzzing-ferryfya
+    developer: buzzing
     purpose: dev
 spec:
   selector:
     matchLabels:
-      app: potato
+      app: ferryfya
   replicas: 1
   template:
     metadata:
       labels:
-        app: potato
+        app: ferryfya
     spec:
       containers:
-        - name: potato-dev
-          image: quay.io/idp_org/potatohead-potato:dev:sha256:205322442af71b5fc3c2cba1e2913757eca36fbbf384609d216de33e1f63532d
+        - name: ferryfya-dev
+          image: quay.io/idp_org/buzzing-ferryfya:dev:sha256:7ec41f4ed611e90327470bb7c97eee478521375ac6f3742b89a8f97f9cbabb8f
