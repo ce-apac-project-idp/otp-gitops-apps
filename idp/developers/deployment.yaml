@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodes-nodd
+  name: baza-scanneryscanscan
   namespace: marwan-dev
   labels:
-    app: nodes-nodd
-    developer: nodes
-    purpose: node
+    app: baza-scanneryscanscan
+    developer: baza
+    purpose: fckya
 spec:
   selector:
     matchLabels:
-      app: nodd
+      app: scanneryscanscan
   replicas: 1
   template:
     metadata:
       labels:
-        app: nodd
+        app: scanneryscanscan
     spec:
       containers:
-        - name: nodd-node
-          image: quay.io/idp_org/nodes-nodd:node:sha256:7d834f32c1633b881620daee2bcaf2e4c3173361fe94492fb9330688c8f4116b
+        - name: scanneryscanscan-fckya
+          image: quay.io/idp_org/baza-scanneryscanscan:fckya:sha256:290c18819eb4710230b71be372ba3470a2e95ed67cb15287b3d859f60f891a26
