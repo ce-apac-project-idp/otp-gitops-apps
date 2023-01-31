@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: ferryfya-dev
-          image: quay.io/idp_org/buzzing-ferryfya:dev:sha256:7ec41f4ed611e90327470bb7c97eee478521375ac6f3742b89a8f97f9cbabb8f
+          image: quay.io/idp_org/buzzing-ferryfya:dev:sha256:55922db8a1e20e329ee6cabcae71231511cefea6638c3db13d11d2a27b065582
