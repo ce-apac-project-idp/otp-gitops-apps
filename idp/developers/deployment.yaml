@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ryu-my-react
+  name: lololol-lololol
   namespace: marwan-dev
   labels:
-    app: ryu-my-react
-    developer: ryu
-    purpose: test
+    app: lololol-lololol
+    developer: lololol
+    purpose: lolol
 spec:
   selector:
     matchLabels:
-      app: my-react
+      app: lololol
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-react
+        app: lololol
     spec:
       containers:
-        - name: my-react-test
-          image: quay.io/idp_org/ryu-my-react:test:sha256:e1a5c9bba5fe53ecd2c010923fbffe7ede532c65916219913bec8541f93f1b6a
+        - name: lololol-lolol
+          image: quay.io/idp_org/lololol-lololol:lolol:sha256:b0c1e6922394fe65e84e3efc6d490a18a0ac825b22df224e44bca7cdf7066d23
