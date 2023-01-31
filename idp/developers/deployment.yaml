@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lololol-lololol
+  name: cucumber-cucumber
   namespace: marwan-dev
   labels:
-    app: lololol-lololol
-    developer: lololol
-    purpose: lolol
+    app: cucumber-cucumber
+    developer: cucumber
+    purpose: cucumber
 spec:
   selector:
     matchLabels:
-      app: lololol
+      app: cucumber
   replicas: 1
   template:
     metadata:
       labels:
-        app: lololol
+        app: cucumber
     spec:
       containers:
-        - name: lololol-lolol
-          image: quay.io/idp_org/lololol-lololol:lolol:sha256:b0c1e6922394fe65e84e3efc6d490a18a0ac825b22df224e44bca7cdf7066d23
+        - name: cucumber-cucumber
+          image: quay.io/idp_org/cucumber-cucumber:cucumber:sha256:621a2f862d5354822e444ecea783cc52fd13e73c98ea27a32c61d4ea34ef0651
