@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lok-ikj
+  name: ryu-my-react
   namespace: marwan-dev
   labels:
-    app: lok-ikj
-    developer: lok
-    purpose: lmn
+    app: ryu-my-react
+    developer: ryu
+    purpose: test
 spec:
   selector:
     matchLabels:
-      app: ikj
+      app: my-react
   replicas: 1
   template:
     metadata:
       labels:
-        app: ikj
+        app: my-react
     spec:
       containers:
-        - name: ikj-lmn
-          image: quay.io/idp_org/lok-ikj:lmn:sha256:6273dc025d4ae60826ce4c40790e4adaf2f2824731b75d8a78ddb43b99b1c0bf
+        - name: my-react-test
+          image: quay.io/idp_org/ryu-my-react:test:sha256:0b7349f98f20ad929e376fe3d01b84970a416f6e6da475a3a7da5edc5e93eb92
