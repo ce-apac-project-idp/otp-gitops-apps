@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: testapp-test
-          image: quay.io/idp_org/pengli-testapp:test:sha256:73f74e9892aa0bb072f80e25fd041696c952456b7139a8e809f222485eb96eb6
+          image: quay.io/idp_org/pengli-testapp:test:sha256:2e5294b3167bbabae47bb7f1decbe1d08b95aca0d5f7cd7271dcf5a4f6a5d878
