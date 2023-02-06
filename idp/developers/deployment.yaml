@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: hoop-spin
-          image: quay.io/idp_org/hula-hoop:spin:sha256:85acc543e7860de3b8c9521f226b86c4cb33172fccf89b07d1912a1cb7aad4a2
+          image: quay.io/idp_org/hula-hoop:spin:sha256:e55c2da835044fd18605900a8c4d2543026f738615013bd6fa3cbfbaac79bd3f
