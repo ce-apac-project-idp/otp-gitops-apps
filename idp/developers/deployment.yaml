@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ryu-my-react
+  name: registry-no-reg
   namespace: marwan-dev
   labels:
-    app: ryu-my-react
-    developer: ryu
-    purpose: test
+    app: registry-no-reg
+    developer: registry
+    purpose: reg
 spec:
   selector:
     matchLabels:
-      app: my-react
+      app: no-reg
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-react
+        app: no-reg
     spec:
       containers:
-        - name: my-react-test
-          image: quay.io/idp_org/ryu-my-react:test:sha256:c16df64a8b153dd515704f9611f79827a6ebd745b5515cc49519c7eccaa6b3ef
+        - name: no-reg-reg
+          image: quay.io/idp_org/registry-no-reg:reg:sha256:074b62aa5c113a7c6f5ec457cb5680d82e7cafbb4a24abd75c53bbbc3f2e6496
