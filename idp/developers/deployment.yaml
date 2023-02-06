@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: registry-no-reg
+  name: shaka-zulu
   namespace: marwan-dev
   labels:
-    app: registry-no-reg
-    developer: registry
-    purpose: reg
+    app: shaka-zulu
+    developer: shaka
+    purpose: invade
 spec:
   selector:
     matchLabels:
-      app: no-reg
+      app: zulu
   replicas: 1
   template:
     metadata:
       labels:
-        app: no-reg
+        app: zulu
     spec:
       containers:
-        - name: no-reg-reg
-          image: quay.io/idp_org/registry-no-reg:reg:sha256:074b62aa5c113a7c6f5ec457cb5680d82e7cafbb4a24abd75c53bbbc3f2e6496
+        - name: zulu-invade
+          image: quay.io/idp_org/shaka-zulu:invade:sha256:615e35cfeb0ecc9305caf6868d5ae4251380e329b3fbb57d07122d377e53c30e
