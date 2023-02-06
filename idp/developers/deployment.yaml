@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: genius-lol
-          image: quay.io/idp_org/aladdin-genius:lol:sha256:bd8c5b8a31c9ad25e82e45083c78ee2e716ec29a9c90385b4cc17a8c1bec8d77
+          image: quay.io/idp_org/aladdin-genius:lol:sha256:83090f3d4a3de0d3326e2eaeb4c6591564043d130653f80dd337d3fc13212284
