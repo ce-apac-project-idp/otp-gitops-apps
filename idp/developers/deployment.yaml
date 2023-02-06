@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hula-hoop
+  name: aladdin-genius
   namespace: marwan-dev
   labels:
-    app: hula-hoop
-    developer: hula
-    purpose: spin
+    app: aladdin-genius
+    developer: aladdin
+    purpose: lol
 spec:
   selector:
     matchLabels:
-      app: hoop
+      app: genius
   replicas: 1
   template:
     metadata:
       labels:
-        app: hoop
+        app: genius
     spec:
       containers:
-        - name: hoop-spin
-          image: quay.io/idp_org/hula-hoop:spin:sha256:e55c2da835044fd18605900a8c4d2543026f738615013bd6fa3cbfbaac79bd3f
+        - name: genius-lol
+          image: quay.io/idp_org/aladdin-genius:lol:sha256:bd8c5b8a31c9ad25e82e45083c78ee2e716ec29a9c90385b4cc17a8c1bec8d77
