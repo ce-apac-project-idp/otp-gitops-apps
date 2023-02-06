@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pengli-testapp
+  name: ryu-my-react
   namespace: marwan-dev
   labels:
-    app: pengli-testapp
-    developer: pengli
+    app: ryu-my-react
+    developer: ryu
     purpose: test
 spec:
   selector:
     matchLabels:
-      app: testapp
+      app: my-react
   replicas: 1
   template:
     metadata:
       labels:
-        app: testapp
+        app: my-react
     spec:
       containers:
-        - name: testapp-test
-          image: quay.io/idp_org/pengli-testapp:test:sha256:2e5294b3167bbabae47bb7f1decbe1d08b95aca0d5f7cd7271dcf5a4f6a5d878
+        - name: my-react-test
+          image: quay.io/idp_org/ryu-my-react:test:sha256:cc45db50ebc2a64f9e7b2d3226ad42ea6b872501376c204d303c2cb8307729e4
