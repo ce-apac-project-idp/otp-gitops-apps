@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: runc-runc
-          image: quay.io/idp_org/rekcod-runc:runc:sha256:5d306949e54e1f71745ad4f5622aa34285d5b2153ec80f4c8b9fa2fc428f7114
+          image: quay.io/idp_org/rekcod-runc:runc:sha256:0d114bcbef26e619fe401fd8c49f652584875cb214fde96f70d3e67d8e685316
