@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shaka-zulu
+  name: hula-hoop
   namespace: marwan-dev
   labels:
-    app: shaka-zulu
-    developer: shaka
-    purpose: invade
+    app: hula-hoop
+    developer: hula
+    purpose: spin
 spec:
   selector:
     matchLabels:
-      app: zulu
+      app: hoop
   replicas: 1
   template:
     metadata:
       labels:
-        app: zulu
+        app: hoop
     spec:
       containers:
-        - name: zulu-invade
-          image: quay.io/idp_org/shaka-zulu:invade:sha256:615e35cfeb0ecc9305caf6868d5ae4251380e329b3fbb57d07122d377e53c30e
+        - name: hoop-spin
+          image: quay.io/idp_org/hula-hoop:spin:sha256:85acc543e7860de3b8c9521f226b86c4cb33172fccf89b07d1912a1cb7aad4a2
