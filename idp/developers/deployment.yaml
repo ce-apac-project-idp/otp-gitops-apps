@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aladdin-genius
+  name: rekcod-runc
   namespace: marwan-dev
   labels:
-    app: aladdin-genius
-    developer: aladdin
-    purpose: lol
+    app: rekcod-runc
+    developer: rekcod
+    purpose: runc
 spec:
   selector:
     matchLabels:
-      app: genius
+      app: runc
   replicas: 1
   template:
     metadata:
       labels:
-        app: genius
+        app: runc
     spec:
       containers:
-        - name: genius-lol
-          image: quay.io/idp_org/aladdin-genius:lol:sha256:83090f3d4a3de0d3326e2eaeb4c6591564043d130653f80dd337d3fc13212284
+        - name: runc-runc
+          image: quay.io/idp_org/rekcod-runc:runc:sha256:5d306949e54e1f71745ad4f5622aa34285d5b2153ec80f4c8b9fa2fc428f7114
