@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: def-hoop
+  name: eee-hellos
   namespace: marwan-dev
   labels:
-    app: def-hoop
-    developer: def
-    purpose: purpose
+    app: eee-hellos
+    developer: eee
+    purpose: yad
 spec:
   selector:
     matchLabels:
-      app: hoop
+      app: hellos
   replicas: 1
   template:
     metadata:
       labels:
-        app: hoop
+        app: hellos
     spec:
       containers:
-        - name: hoop-purpose
-          image: quay.io/idp_org/def-hoop:purpose:sha256:3f658a38b8186c91ecf4c0d45eb4c61c7f7c9c965adc9796af43d42b3a322432
+        - name: hellos-yad
+          image: quay.io/idp_org/eee-hellos:yad:sha256:945679b681937b4d2fff52d52101bc54806e2bc87d6ba8e377bb5349987973f7
