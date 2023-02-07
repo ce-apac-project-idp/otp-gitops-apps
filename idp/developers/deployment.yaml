@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: whynowork-purpose
-          image: quay.io/idp_org/afdd-whynowork:purpose:sha256:5a9072eb3502454f193b67386781306a0ac18770881b27d545bd9f61b9d75cd1
+          image: quay.io/idp_org/afdd-whynowork:purpose:sha256:f68819c5820fd97282875766e20c79c674f76482c862930709b159965c1c4860
