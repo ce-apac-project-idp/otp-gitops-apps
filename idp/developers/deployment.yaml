@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: adds-asdad
+  name: default-ad
   namespace: marwan-dev
   labels:
-    app: adds-asdad
-    developer: adds
-    purpose: asd
+    app: default-ad
+    developer: default
+    purpose: adqw
 spec:
   selector:
     matchLabels:
-      app: asdad
+      app: ad
   replicas: 1
   template:
     metadata:
       labels:
-        app: asdad
+        app: ad
     spec:
       containers:
-        - name: asdad-asd
-          image: quay.io/idp_org/adds-asdad:asd:sha256:7dccf63a42ee1cddeafccc4daec2af6feab24d5178e99e2a145013536b5e5c75
+        - name: ad-adqw
+          image: quay.io/idp_org/default-ad:adqw:sha256:feaf30119e8fba0671201d5a456c82497c7e9ffa7765387b8723103ca78c5c4b
