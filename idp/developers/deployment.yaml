@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rely-rook
+  name: dew-train
   namespace: marwan-dev
   labels:
-    app: rely-rook
-    developer: rely
-    purpose: der
+    app: dew-train
+    developer: dew
+    purpose: one
 spec:
   selector:
     matchLabels:
-      app: rook
+      app: train
   replicas: 1
   template:
     metadata:
       labels:
-        app: rook
+        app: train
     spec:
       containers:
-        - name: rook-der
-          image: quay.io/idp_org/rely-rook:der:sha256:25fa0b322d3469fda7efbde1dbd7e24b995b432da2562ac315b7fb62856c2cd0
+        - name: train-one
+          image: quay.io/idp_org/dew-train:one:sha256:c26f5fc9df813b845f0f45c9daa41fba01962322b7c98d2da23cd9627769d7d3
