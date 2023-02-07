@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: curl-refused
+  name: werd-wget
   namespace: marwan-dev
   labels:
-    app: curl-refused
-    developer: curl
-    purpose: connection
+    app: werd-wget
+    developer: werd
+    purpose: hopped
 spec:
   selector:
     matchLabels:
-      app: refused
+      app: wget
   replicas: 1
   template:
     metadata:
       labels:
-        app: refused
+        app: wget
     spec:
       containers:
-        - name: refused-connection
-          image: quay.io/idp_org/curl-refused:connection:sha256:4338a2427eca827a453ee5adc648e77ddf6a4ae7be427be39f2aa4dfab3b8415
+        - name: wget-hopped
+          image: quay.io/idp_org/werd-wget:hopped:sha256:877b17c41d572cb22e7f766c4c31856992c6e63c7254320f8d2b230641e7b22f
