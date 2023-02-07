@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: default-ad
+  name: dexter-recked
   namespace: marwan-dev
   labels:
-    app: default-ad
-    developer: default
-    purpose: adqw
+    app: dexter-recked
+    developer: dexter
+    purpose: get
 spec:
   selector:
     matchLabels:
-      app: ad
+      app: recked
   replicas: 1
   template:
     metadata:
       labels:
-        app: ad
+        app: recked
     spec:
       containers:
-        - name: ad-adqw
-          image: quay.io/idp_org/default-ad:adqw:sha256:feaf30119e8fba0671201d5a456c82497c7e9ffa7765387b8723103ca78c5c4b
+        - name: recked-get
+          image: quay.io/idp_org/dexter-recked:get:sha256:76337952428eac77c4bb57f506feafd118c58240a7550a38742c5054e9e25045
