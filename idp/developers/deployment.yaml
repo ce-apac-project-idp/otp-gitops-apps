@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dew-train
+  name: def-hoop
   namespace: marwan-dev
   labels:
-    app: dew-train
-    developer: dew
-    purpose: one
+    app: def-hoop
+    developer: def
+    purpose: purpose
 spec:
   selector:
     matchLabels:
-      app: train
+      app: hoop
   replicas: 1
   template:
     metadata:
       labels:
-        app: train
+        app: hoop
     spec:
       containers:
-        - name: train-one
-          image: quay.io/idp_org/dew-train:one:sha256:c26f5fc9df813b845f0f45c9daa41fba01962322b7c98d2da23cd9627769d7d3
+        - name: hoop-purpose
+          image: quay.io/idp_org/def-hoop:purpose:sha256:3f658a38b8186c91ecf4c0d45eb4c61c7f7c9c965adc9796af43d42b3a322432
