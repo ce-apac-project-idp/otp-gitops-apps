@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rekcod-runc
+  name: curl-refused
   namespace: marwan-dev
   labels:
-    app: rekcod-runc
-    developer: rekcod
-    purpose: runc
+    app: curl-refused
+    developer: curl
+    purpose: connection
 spec:
   selector:
     matchLabels:
-      app: runc
+      app: refused
   replicas: 1
   template:
     metadata:
       labels:
-        app: runc
+        app: refused
     spec:
       containers:
-        - name: runc-runc
-          image: quay.io/idp_org/rekcod-runc:runc:sha256:0d114bcbef26e619fe401fd8c49f652584875cb214fde96f70d3e67d8e685316
+        - name: refused-connection
+          image: quay.io/idp_org/curl-refused:connection:sha256:4338a2427eca827a453ee5adc648e77ddf6a4ae7be427be39f2aa4dfab3b8415
