@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: werd-wget
+  name: rely-rook
   namespace: marwan-dev
   labels:
-    app: werd-wget
-    developer: werd
-    purpose: hopped
+    app: rely-rook
+    developer: rely
+    purpose: der
 spec:
   selector:
     matchLabels:
-      app: wget
+      app: rook
   replicas: 1
   template:
     metadata:
       labels:
-        app: wget
+        app: rook
     spec:
       containers:
-        - name: wget-hopped
-          image: quay.io/idp_org/werd-wget:hopped:sha256:877b17c41d572cb22e7f766c4c31856992c6e63c7254320f8d2b230641e7b22f
+        - name: rook-der
+          image: quay.io/idp_org/rely-rook:der:sha256:25fa0b322d3469fda7efbde1dbd7e24b995b432da2562ac315b7fb62856c2cd0
