@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: afdd-whynowork
+  name: qd-asd
   namespace: marwan-dev
   labels:
-    app: afdd-whynowork
-    developer: afdd
-    purpose: purpose
+    app: qd-asd
+    developer: qd
+    purpose: as
 spec:
   selector:
     matchLabels:
-      app: whynowork
+      app: asd
   replicas: 1
   template:
     metadata:
       labels:
-        app: whynowork
+        app: asd
     spec:
       containers:
-        - name: whynowork-purpose
-          image: quay.io/idp_org/afdd-whynowork:purpose:sha256:f68819c5820fd97282875766e20c79c674f76482c862930709b159965c1c4860
+        - name: asd-as
+          image: quay.io/idp_org/qd-asd:as:sha256:1d825eea2ce69e67b9f80803dbe13904f0c1ff7875dcd108323025469683ea59
