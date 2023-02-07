@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eee-hellos
+  name: dasd-relyw
   namespace: marwan-dev
   labels:
-    app: eee-hellos
-    developer: eee
-    purpose: yad
+    app: dasd-relyw
+    developer: dasd
+    purpose: ew
 spec:
   selector:
     matchLabels:
-      app: hellos
+      app: relyw
   replicas: 1
   template:
     metadata:
       labels:
-        app: hellos
+        app: relyw
     spec:
       containers:
-        - name: hellos-yad
-          image: quay.io/idp_org/eee-hellos:yad:sha256:945679b681937b4d2fff52d52101bc54806e2bc87d6ba8e377bb5349987973f7
+        - name: relyw-ew
+          image: quay.io/idp_org/dasd-relyw:ew:sha256:b66ce7c3bef693238b75ff64e45fd776fb2c22453ebed4275bab23fa44174477
